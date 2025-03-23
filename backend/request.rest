@@ -1,0 +1,25 @@
+GET http://localhost:5000/Messages
+
+###
+GET http://localhost:5000/Messages/1
+
+###
+POST http://localhost:5000/Messages
+Content-Type: application/json
+
+{
+    "name": "John",
+    "message": "Tulis catatan dan ide; satukan daftar, foto, dan file Anda. Aplikasi Notebook web menghadirkan buku catatan digital dan kartu catatan ke browser apa pun. Kustomisasi sampul buku catatan dengan menyeret gambar dari desktop Anda. Beri kode warna pada catatan dalam buku catatan Anda dengan warna yang disediakan, atau dengan membuatnya sendiri."
+}
+
+###
+PATCH  http://localhost:5000/Messages/1
+Content-Type: application/json
+
+{
+    "name": "Ahmad Fikri",
+    "message": "udah berhasil dirubah kan"
+}
+
+###
+DELETE   http://localhost:5000/Messages/2
