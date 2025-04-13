@@ -29,7 +29,7 @@ steps:
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
     args: ["app", "deploy", "--quiet"]
-    dir: "frontend-056"  
+    dir: "frontend"  
 
 options: 
   logging: CLOUD_LOGGING_ONLY
