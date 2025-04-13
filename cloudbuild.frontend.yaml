@@ -27,10 +27,14 @@ steps:
         path: "/root/.npm"
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: gcloud
-    args: ["app", "deploy", "--quiet"]
-    dir: "frontend" 
-  
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        for i in {1..5}; do
+          gcloud app deploy --quiet && break || sleep 10
+        done
+    dir: "frontend"
 
 options: 
   logging: CLOUD_LOGGING_ONLY
